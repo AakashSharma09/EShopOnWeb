@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aakashsharmaeshoponweb 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aakashsharmaeshoponweb
+  template:
+    metadata:
+      labels:
+        app: aakashsharmaeshoponweb 
+    spec:
+      containers:
+        - name: aakashsharmaeshoponweb 
+          image: mycontainerregistry0402202501.azurecr.io/aakashsharmaeshoponweb
+          ports:
+          - containerPort: 8080
